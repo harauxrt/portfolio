@@ -11,18 +11,22 @@
         <div class="nav-container">
             <a href="#hero" class="nav-logo">Harry ARAUX</a>
             <ul class="nav-links">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#education">Formation</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#certifications">Documents</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
+                <li><a href="#education" data-i18n="nav_education">Formation</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="#certifications" data-i18n="nav_documents">Documents</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
             </ul>
     
-            <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème">
+            <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème" data-i18n-aria="theme_toggle_aria">
                 <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 
                 <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+
+            <button id="lang-toggle" class="lang-btn" aria-label="Traduire le site">
+                EN
             </button>
         </div>
     </nav>
@@ -30,14 +34,14 @@
         <!-- Section Hero -->
         <section id="hero" class="hero">
             <div class="container">
-                <h1>Je suis <span class="nom">Harry ARAUX</span></h1>
-                <hteste><span class="tite">Etudiant en réseaux et télécommunications</span></hteste>
+                <h1><span data-i18n="hero_i_am">Je suis</span> <span class="nom">Harry ARAUX</span></h1>
+                <hteste><span class="tite" data-i18n="hero_subtitle">Etudiant en réseaux et télécommunications</span></hteste>
 
-                <p>Bienvenue sur mon portfolio. <br> Chaque aventure commence par une page blanche. Voici la mienne. Plongez dans mon univers et laissez-vous porter par l’histoire de mon parcours.
+                <p data-i18n="hero_intro">Bienvenue sur mon portfolio. <br> Chaque aventure commence par une page blanche. Voici la mienne. Plongez dans mon univers et laissez-vous porter par l’histoire de mon parcours.
                 <br>Rien ne se crée, rien se perd, tout se transforme et je transforme chaque défi en tremplin vers l'excellence.
                 </p>
                 <a href="#projects" class="discover-button">
-                    Découvrez mes projets
+                    <span data-i18n="hero_discover">Découvrez mes projets</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                 </a>
                 <div class="social-links">
@@ -60,10 +64,10 @@
         <!-- Section À propos -->
         <section id="about" class="about">
             <div class="container">
-                <h2>À propos de moi</h2>
+                <h2 data-i18n="about_title">À propos de moi</h2>
                 <div class="about-grid">
                     <div class="about-content">
-                        <p>
+                        <p data-i18n="about_text">
             Actuellement étudiant en BUT Réseaux et Télécommunications, j'aspire à devenir ingénieur en réseaux et, à terme, créer ma propre entreprise. <br><br>
 
             Mon parcours m'a permis de passer de la découverte des bases (adressage IP, virtualisation classique) à une réelle autonomie technique. Je maîtrise aujourd'hui l'administration de systèmes complexes via la virtualisation et la configuration de topologies avancées.<br><br>
@@ -71,9 +75,9 @@
             Rigoureux et curieux, je cherche maintenant à consolider mes acquis, notamment sur la sécurisation des serveurs Linux (gestion des logs) et l'approfondissement de mon anglais technique.
         </p>
                         <div class="education-card" onclick="toggleEducationModal()">
-                            <h3>Formation</h3>
-                            <p>Iut Terre sainte Reunion</p>
-                            <p class="click-info">Cliquez pour plus d'informations</p>
+                            <h3 data-i18n="about_education_card_title">Formation</h3>
+                            <p data-i18n="about_education_card_school">Iut Terre sainte Reunion</p>
+                            <p class="click-info" data-i18n="click_more">Cliquez pour plus d'informations</p>
                         </div>
                     </div>
                     <div class="skills-grid">
@@ -85,8 +89,8 @@
              3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502
              4.502 0 0 0 2.25 15Z" />
   </svg>
-                                                          <h3>Réseaux & Systemes</h3>
-                            <p>TLS & Certificats x.509 <br> Sécurisation serveur apache <br> Configuration serveur : Docker/DHCP/DNS <br> Protocole MPLS/OSPF/BGP</p>
+                                                          <h3 data-i18n="skill_networks_title">Réseaux & Systemes</h3>
+                            <p data-i18n="skill_networks_desc">TLS & Certificats x.509 <br> Sécurisation serveur apache <br> Configuration serveur : Docker/DHCP/DNS <br> Protocole MPLS/OSPF/BGP</p>
                         </div>
                         <div class="skill-card">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -101,8 +105,8 @@
              M8.25 11.25l1.5 1.5 3-3" />
   </svg>
 
-  <h3>Gestion de projet</h3>
-  <p>
+  <h3 data-i18n="skill_pm_title">Gestion de projet</h3>
+  <p data-i18n="skill_pm_desc">
     Cahier des Charges<br>
     Spécifications Fonctionnelles Détaillées<br>
     Spécifications Techniques<br>
@@ -129,8 +133,8 @@
                                   0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113
                                   1.157-4.418" />
                        </svg>
-                                                          <h3>WEB</h3>
-                            <p>HTML<br> CSS<br>JavaScript<br>PHP<br>Python </p>
+                                                          <h3 data-i18n="skill_web_title">WEB</h3>
+                            <p data-i18n="skill_web_desc">HTML<br> CSS<br>JavaScript<br>PHP<br>Python </p>
                         </div>
                         <div class="skill-card">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -155,16 +159,16 @@
              3h.008v.008H6.75V15Zm0
              3h.008v.008H6.75V18Z" />
   </svg>
-                                                          <h3>Logiciels & Os</h3>
-                            <p>Drive<br>VirtualBox<br>VMware<br>Packet tracer<br>GNS3<br>Windows (7, 10, 11)<br>Linux<br>IOS</p>
+                                                          <h3 data-i18n="skill_tools_title">Logiciels & Os</h3>
+                            <p data-i18n="skill_tools_desc">Drive<br>VirtualBox<br>VMware<br>Packet tracer<br>GNS3<br>Windows (7, 10, 11)<br>Linux<br>IOS</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="philosophy-section">
-  <h2>Mes intérêts</h2>
+  <h2 data-i18n="interests_title">Mes intérêts</h2>
   <h3>
-    <center>En dehors de mes études, je me consacre à mes passions qui reflètent ma créativité, et l’envie de me dépasser.</center><br>
+    <center data-i18n="interests_subtitle">En dehors de mes études, je me consacre à mes passions qui reflètent ma créativité, et l’envie de me dépasser.</center><br>
   </h3>
 
   <div class="philosophy-grid">
@@ -180,8 +184,8 @@
         <path stroke-linecap="round" stroke-linejoin="round"
               d="M12 22.5V12M12 12L3.75 7.5M12 12l8.25-4.5" />
       </svg>
-      <h3>Impression 3D</h3>
-      <p>Seule l’imagination fixe les limites de ce qui peut être créé.</p>
+      <h3 data-i18n="interest_3d_title">Impression 3D</h3>
+      <p data-i18n="interest_3d_desc">Seule l’imagination fixe les limites de ce qui peut être créé.</p>
     </div>
 
     <div class="philosophy-card purple">
@@ -196,16 +200,16 @@
         <circle cx="4" cy="20" r="2" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="20" cy="20" r="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <h3>Drone FPV</h3>
-      <p>Une liberté totale, guidée par la précision et le contrôle.</p>                        
+      <h3 data-i18n="interest_fpv_title">Drone FPV</h3>
+      <p data-i18n="interest_fpv_desc">Une liberté totale, guidée par la précision et le contrôle.</p>                        
     </div>
 
     <div class="philosophy-card green">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
       </svg>
-      <h3>Musculation</h3>
-      <p>Avoir un mental fort, atteindre ses objectifs et prendre soin de soi.</p>
+      <h3 data-i18n="interest_gym_title">Musculation</h3>
+      <p data-i18n="interest_gym_desc">Avoir un mental fort, atteindre ses objectifs et prendre soin de soi.</p>
     </div>
 
   </div>
@@ -216,7 +220,7 @@
 
         <section id="experience" class="experience">
             <div class="container">
-                <h2>Mon Parcours Professionnel</h2>
+                <h2 data-i18n="exp_title">Mon Parcours Professionnel</h2>
                 <div class="timeline">
                     
                     <div class="timeline-item fade-in-up">
@@ -224,15 +228,15 @@
                         <div class="timeline-date">2025 - 2026</div>
                         <div class="timeline-content">
                             <div class="exp-header">
-                                <h3>Alternant Assistant Informatique</h3>
+                                <h3 data-i18n="exp1_role">Alternant Assistant Informatique</h3>
                                 <h4>Coeur d'affaire - SAINT PAUL</h4>
                             </div>
                             <ul>
-                                <li>Analyse des besoins utilisateurs</li>
-                                <li>Mise en place et maintenance de solutions techniques</li>
-                                <li>Documentation et support utilisateurs</li>
-                                <li>Supervision</li>
-                                <li>Communication sociale</li>
+                                <li data-i18n="exp1_item1">Analyse des besoins utilisateurs</li>
+                                <li data-i18n="exp1_item2">Mise en place et maintenance de solutions techniques</li>
+                                <li data-i18n="exp1_item3">Documentation et support utilisateurs</li>
+                                <li data-i18n="exp1_item4">Supervision</li>
+                                <li data-i18n="exp1_item5">Communication sociale</li>
 
 
                             </ul>
@@ -259,12 +263,12 @@
                         <div class="timeline-date">2025</div>
                         <div class="timeline-content">
                             <div class="exp-header">
-                                <h3>Stagiaire à la DSI</h3>
+                                <h3 data-i18n="exp2_role">Stagiaire à la DSI</h3>
                                 <h4>Université de La Réunion - LE TAMPON</h4>
                             </div>
                             <ul>
-                                <li>Maintenance informatique et support technique</li>
-                                <li>Cartographie WiFi et déploiement serveurs</li>
+                                <li data-i18n="exp2_item1">Maintenance informatique et support technique</li>
+                                <li data-i18n="exp2_item2">Cartographie WiFi et déploiement serveurs</li>
                             </ul>
         
                             <div class="exp-carousel-container">
@@ -292,7 +296,7 @@
 
         <section id="education" class="experience">
             <div class="container">
-                <h2>Mon Parcours</h2>
+                <h2 data-i18n="edu_title">Mon Parcours</h2>
                 
                 <div class="accordion-gallery">
                     
@@ -300,10 +304,10 @@
                         <div class="panel-overlay"></div>
                         <div class="panel-content">
                             <span class="panel-year">2023 - 2026</span>
-                            <h3>BUT Reseaux & Telecommunication</h3>
+                            <h3 data-i18n="edu1_title">BUT Reseaux & Telecommunication</h3>
                             <div class="panel-details">
                                 <p>IUT de La Réunion</p>
-                                <p>Administration Systèmes & Réseaux.</p>
+                                <p data-i18n="edu1_desc">Administration Systèmes & Réseaux.</p>
                             </div>
                         </div>
                     </div>
@@ -312,10 +316,10 @@
                         <div class="panel-overlay"></div>
                         <div class="panel-content">
                             <span class="panel-year">2023</span>
-                            <h3>Prépa TSI</h3>
+                            <h3 data-i18n="edu2_title">Prépa TSI</h3>
                             <div class="panel-details">
                                 <p>Lycée Amiral Bouvet</p>
-                                <p>Mathématiques, Physique & Sciences de l'Ingénieur.</p>
+                                <p data-i18n="edu2_desc">Mathématiques, Physique & Sciences de l'Ingénieur.</p>
                             </div>
                         </div>
                     </div>
@@ -324,10 +328,10 @@
                         <div class="panel-overlay"></div>
                         <div class="panel-content">
                             <span class="panel-year">2022</span>
-                            <h3>Bac STI2D</h3>
+                            <h3 data-i18n="edu3_title">Bac STI2D</h3>
                             <div class="panel-details">
-                                <p>Mention BIEN</p>
-                                <p>Option SIN (Systèmes d'Information et Numérique).</p>
+                                <p data-i18n="edu3_honor">Mention BIEN</p>
+                                <p data-i18n="edu3_desc">Option SIN (Systèmes d'Information et Numérique).</p>
                             </div>
                         </div>
                     </div>
@@ -342,8 +346,8 @@
         <!-- Section Projets -->
         <section id="projects" class="projects">
             <div class="container">
-                <h2>Mes Projets</h2>
-                <h3>Cliquez sur les projets pour plus de details</h3>
+                <h2 data-i18n="projects_title">Mes Projets</h2>
+                <h3 data-i18n="projects_subtitle">Cliquez sur les projets pour plus de details</h3>
                 <br>
                 <div id="projectsGrid" class="projects-grid"></div>
             </div>
@@ -354,18 +358,18 @@
 
 <section id="certifications" class="certifications">
     <div class="container">
-        <h2>Documents & Certifications</h2>
-        <h3>Cliquez sur les boutons pour consulter les documents</h3>
+        <h2 data-i18n="docs_title">Documents & Certifications</h2>
+        <h3 data-i18n="docs_subtitle">Cliquez sur les boutons pour consulter les documents</h3>
 
         <div class="documents-grid">
             <!-- Carte pour le CV -->
             <a href="cv.pdf" class="document-card" target="_blank">
-                <span>Mon CV</span> <!-- Le texte du bouton -->
+                <span data-i18n="docs_cv">Mon CV</span> <!-- Le texte du bouton -->
                 <img src="images/cv.png" alt="CV Icon"> <!-- L'icône image en dessous du texte -->
             </a>
             <!-- Carte pour le MOOC -->
             <a href="mc.pdf" class="document-card" target="_blank">
-                <span>MOOC Anssi</span> <!-- Le texte du bouton -->
+                <span data-i18n="docs_mooc">MOOC Anssi</span> <!-- Le texte du bouton -->
                 <img src="images/Anssi.png" alt="MOOC Icon"> <!-- L'icône image en dessous du texte -->
             </a>
         </div>
@@ -377,37 +381,37 @@
         <!-- Section Contact -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Me Contacter</h2>
+                <h2 data-i18n="contact_title">Me Contacter</h2>
                 <div class="contact-content">
                     <form id="contactForm" class="contact-form" onsubmit="handleSubmit(event)">
                         <div class="form-group">
-                            <label for="name">Nom complet</label>
+                            <label for="name" data-i18n="contact_name_label">Nom complet</label>
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
                                 required
-                                placeholder="Votre nom"
+                                placeholder="Votre nom" data-i18n-placeholder="contact_name_ph"
                             />
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email" data-i18n="contact_email_label">Email</label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
                                 required
-                                placeholder="votre@email.com"
+                                placeholder="votre@email.com" data-i18n-placeholder="contact_email_ph"
                             />
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
+                            <label for="message" data-i18n="contact_message_label">Message</label>
                             <textarea
                                 id="message"
                                 name="message"
                                 required
                                 rows="6"
-                                placeholder="Votre message..."
+                                placeholder="Votre message..." data-i18n-placeholder="contact_message_ph"
                             ></textarea>
                         </div>
                         <button type="submit" class="submit-button">
@@ -415,7 +419,7 @@
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
                                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                             </svg>
-                            Envoyer le message
+                            <span data-i18n="contact_send">Envoyer le message</span>
                         </button>
                     </form>
                 </div>
@@ -429,29 +433,29 @@
             <button onclick="toggleEducationModal()" class="close-button">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
-            <h3>Présentation BUT R&T</h3>
+            <h3 data-i18n="modal_edu_title">Présentation BUT R&T</h3>
             <div class="modal-body">
-                <p>
+                <p data-i18n="modal_edu_text">
                     Le BUT Réseaux & Télécommunications de l’IUT de La Réunion forme des experts
 polyvalents en technologies de l’information, maîtrisant la conception, la sécurisation et la
 gestion des systèmes modernes, avec un fort accent sur la pratique, le travail d’équipe et
 l’innovation.
                 </p>
                 <div class="info-card">
-                    <h4>Administrer les réseaux et l’Internet</h4>
+                    <h4 data-i18n="modal_edu_card1_title">Administrer les réseaux et l’Internet</h4>
                     <ul>
-                        <li>en choisissant les solutions et technologies réseaux adaptées</li>
-                        <li>en respectant les principes fondamentaux de la sécurité informatique</li>
-                        <li>en utilisant une approche rigoureuse pour la résolution des dysfonctionnement</li>
-                        <li>en respectant les règles métiers (déontologie, tests, vérifications de conformité)</li>
+                        <li data-i18n="modal_edu_card1_item1">en choisissant les solutions et technologies réseaux adaptées</li>
+                        <li data-i18n="modal_edu_card1_item2">en respectant les principes fondamentaux de la sécurité informatique</li>
+                        <li data-i18n="modal_edu_card1_item3">en utilisant une approche rigoureuse pour la résolution des dysfonctionnement</li>
+                        <li data-i18n="modal_edu_card1_item4">en respectant les règles métiers (déontologie, tests, vérifications de conformité)</li>
                     </ul>
                 </div>
                 <div class="info-card">
-                    <h4>Connecter les entreprises et les usagers</h4>
+                    <h4 data-i18n="modal_edu_card2_title">Connecter les entreprises et les usagers</h4>
                     <ul>
-                        <li>en communiquant avec le client et les différents acteurs impliqués</li>
-                        <li>Implementation d'un container Docker</li>
-                        <li>en choisissant les solutions et technologies adaptées</li>
+                        <li data-i18n="modal_edu_card2_item1">en communiquant avec le client et les différents acteurs impliqués</li>
+                        <li data-i18n="modal_edu_card2_item2">Implementation d'un container Docker</li>
+                        <li data-i18n="modal_edu_card2_item3">en choisissant les solutions et technologies adaptées</li>
                     </ul>
                 </div>
             </div>
