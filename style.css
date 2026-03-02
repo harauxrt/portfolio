@@ -1,0 +1,1809 @@
+.philosophy-card svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+.my-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+
+
+
+/* Style pour la balise personnalisée hteste */
+hteste {
+    font-size: 2.5rem; /* Taille comme pour les h2 */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Style spécifique pour le texte dans span.tite */
+hteste .tite {
+    font-size: inherit; /* La taille héritée de hteste */
+    font-weight: inherit; /* La graisse de police héritée de hteste */
+}
+
+
+
+/* Style des titres dans différentes sections */
+.about h2,
+.hero h2,
+.projects h2,
+.contact h2,
+.philosophy-section h2 {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center; /* Assure que le texte est centré */
+    margin-bottom: 2rem; /* Moins de marge pour éviter trop d'espace */
+}
+
+/* La barre animée en dessous du titre */
+.about h2::after,
+.hero h2::after,
+.projects h2::after,
+.contact h2::after,
+.philosophy-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Place la barre juste en dessous du titre */
+    left: 50%; /* Place la barre au centre de l'élément */
+    width: 25%; /* Choisis ici la largeur que tu souhaites, par exemple 60% */
+    height: 3px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 1), rgba(139, 92, 246, 1), rgba(59, 130, 246, 1));
+    animation: slide 1.5s infinite; /* Animation plus rapide */
+    border-radius: 5px;
+    transform: translateX(-50%); /* Centre la barre en fonction du titre */
+}
+
+/* Animation pour faire défiler la barre */
+@keyframes slide {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/* Animation pour faire défiler la barre */
+@keyframes slide {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Animation pour faire défiler la barre */
+@keyframes slide {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+
+.nom {
+    color: #ffffff;
+}
+
+.tite {
+    color: rgb(94, 134, 255);
+}
+
+
+
+
+/* Base styles */
+:root {
+    --primary: #1f2937;
+    --primary-dark: #1f2937;
+    --primary-light: #1f2937;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+    --text-tertiary: #aaadb1;
+    --bg-overlay: rgba(37, 99, 235, 0.1);
+    --bg-overlay-hover: rgba(79, 95, 128, 0.2);
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --green: #10b981;
+    --tech-tag: rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background-color: var(--primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Hero section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, var(--primary-dark), var(--primary));
+    position: relative;
+}
+
+.hero .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.profile-image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-tertiary);
+    max-width: 42rem;
+    margin-bottom: 2rem;
+}
+
+.discover-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--blue);
+    color: white;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.discover-button:hover {
+    transform: translateY(-2px);
+    background: #2563eb;
+}
+
+.discover-button svg {
+    margin-left: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.social-link {
+    padding: 0.75rem;
+    background: var(--bg-overlay);
+    border-radius: 9999px;
+    color: var(--text-primary);
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background: var(--bg-overlay-hover);
+}
+
+.scroll-button {
+    position: absolute;
+    bottom: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* About section */
+.about {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, var(--primary), var(--primary-light));
+    padding: 5rem 0;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-content p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.education-card {
+    padding: 1.5rem;
+    background: var(--bg-overlay);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.education-card:hover {
+    background: var(--bg-overlay-hover);
+    transform: translateY(-2px);
+}
+
+.education-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-card .click-info {
+    font-weight: bold;  /* Mettre le texte en gras */
+    color: #ff0000;  /* Choisir une couleur flashy, ici magenta */
+    font-size: 1.1rem;  /* Légèrement augmenter la taille pour le rendre plus visible */
+    transition: color 0.3s ease;  /* Transition douce pour le changement de couleur */
+}
+
+.education-card .click-info:hover {
+    color: #FF6347;  
+}
+
+.click-info {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.skill-card {
+    padding: 1.5rem;
+    background: var(--bg-overlay);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-card:hover {
+    background: var(--bg-overlay-hover);
+    transform: translateY(-2px);
+}
+
+.skill-card .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.skill-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    color: var(--text-secondary);
+}
+
+/* Philosophy section */
+.philosophy-section {
+    margin-top: 5rem;
+}
+
+.philosophy-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .philosophy-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.philosophy-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-4px);
+}
+
+.philosophy-card.blue {
+    background: linear-gradient(135deg, var(--blue), #60a5fa);
+}
+
+.philosophy-card.purple {
+    background: linear-gradient(135deg, var(--purple), #a78bfa);
+}
+
+.philosophy-card.green {
+    background: linear-gradient(135deg, var(--green), #34d399);
+}
+
+.philosophy-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1.5rem;
+}
+
+.philosophy-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Projects section */
+
+.projects {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, var(--primary-light), var(--primary));
+    padding: 5rem 0;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux projets par ligne */
+    gap: 2rem; /* Espacement entre les cartes */
+}
+
+
+.project-card {
+    background: var(--bg-overlay);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image-container::before {
+    content: "Voir les détails";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image-container::before {
+    opacity: 1;
+}
+
+.project-card:hover .carousel-slide img {
+    transform: scale(1.3);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background: #e5e7eb;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+
+/*
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project-card {
+    background: var(--bg-overlay);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+.project-image-container::before {
+    content: "Voir les détails";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image-container::before {
+    opacity: 1;
+}
+
+.project-card:hover .carousel-slide img {
+    transform: scale(1.1);
+}
+.project-image {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+
+
+
+
+
+
+
+
+/* Contact section */
+.contact {
+    background: #1f2937;
+    padding: 5rem 1rem;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--text-primary);
+}
+
+.contact-content {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgb(16, 29, 48);
+    border: 1px solid rgb(55, 65, 81);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+.submit-button.submitted {
+    background: var(--green);
+    cursor: not-allowed;
+}
+
+/* Project cards */
+.tech-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--tech-tag);
+    border-radius: 9999px;
+    color: var(--blue);
+    font-size: 0.875rem;
+    margin: 0.25rem;
+}
+
+.project-card .project-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    height: 3rem; /* Limite à 2 lignes (en fonction de la taille de police) */
+    line-height: 1.5rem; /* Hauteur de ligne pour espacement */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.project-description.full-text {
+    height: auto; /* Supprime la hauteur fixe pour afficher tout le texte */
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal; /* Permet de dérouler le texte complet */
+}
+
+
+
+
+/* Smooth scroll animation */
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-button {
+    transition: all 0.3s ease;
+}
+
+.scroll-button:hover {
+    transform: translateY(-4px);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 50;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--primary-dark);
+    border-radius: 0.5rem;
+    max-width: 42rem;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: var(--text-primary);
+}
+
+.modal-body {
+    margin-top: 1.5rem;
+}
+
+.info-card {
+    background: var(--bg-overlay);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.info-card h4 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.info-card ul {
+    list-style-position: inside;
+    color: var(--text-secondary);
+}
+
+.info-card li {
+    margin-bottom: 0.5rem;
+}
+
+.project-modal-image {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-modal-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.project-modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.project-modal-link {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-modal-link.primary {
+    background: var(--primary-light);
+    color: var(--text-primary);
+}
+
+.project-modal-link.primary:hover {
+    background: var(--primary);
+}
+
+.project-modal-link.secondary {
+    background: var(--bg-overlay);
+    color: var(--text-secondary);
+}
+
+.project-modal-link.secondary:hover {
+    background: var(--bg-overlay-hover);
+}
+
+/* Carousel styles */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-slides {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.modal-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+.modal-slide.active {
+    opacity: 1;
+    display: block;
+}
+
+.modal-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.carousel-button.next {
+    right: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* Project card carousel */
+.project-image-container .carousel {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Documents grid */
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Document card */
+.document-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bg-overlay);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.document-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.document-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+
+.document-card img {
+    width: 150px;  /* Réduire la taille de l'icône */
+    height: auto; /* Maintenir les proportions de l'icône */
+    margin-top: 10px;  /* Espacement entre le texte et l'icône */
+    transition: transform 0.3s ease;  /* Animation au survol */
+}
+
+.document-card:hover img {
+    transform: scale(1.1);  /* Agrandir légèrement l'image au survol */
+}
+
+
+
+.certifications h2 {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* La barre animée sous le titre */
+.certifications h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Positionne la barre juste en dessous du titre */
+    left: 50%; /* Centre la barre sous le titre */
+    width: 60%; /* Choisis la largeur de la barre (ici 60%) */
+    height: 3px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 1), rgba(139, 92, 246, 1), rgba(59, 130, 246, 1));
+    animation: slide 1.5s infinite; /* Animation pour faire défiler la barre */
+    border-radius: 5px;
+    transform: translateX(-50%); /* Centre la barre par rapport au titre */
+}
+
+/* Animation pour faire défiler la barre */
+@keyframes slide {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Animation fade-in */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hover animation */
+  .document-card:hover,
+  .project-card:hover,
+  .submit-button:hover,
+  .discover-button:hover {
+    transform: translateY(-5px) scale(1.05
+    );
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+  }
+  
+  /* Button light sweep */
+  button, .discover-button, .submit-button, .document-button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::after, .discover-button::after, .submit-button::after, .document-button::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transition: left 0.5s;
+  }
+  
+  button:hover::after,
+  .discover-button:hover::after,
+  .submit-button:hover::after,
+  .document-button:hover::after {
+    left: 100%;
+  }
+  
+  /* Tech tag entry */
+  .project-card .tech-tags {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+  }
+  
+  .project-card:hover .tech-tags {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Updated document-card style */
+  .document-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: linear-gradient(145deg, rgba(70, 98, 224, 0.2), rgba(16, 27, 185, 0.15));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    color: white;
+  }
+  
+  .document-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #3b82f6;
+  }
+  
+  .document-card span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .document-card:hover {
+    transform: scale(1.05) translateY(-6px);
+    background: linear-gradient(145deg, rgba(47, 127, 255, 0.3), rgba(53, 16, 185, 0.25));
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+  }
+  
+
+ .project-modal-button {
+    background-color: #564caf; /* Couleur de fond verte */
+    color: white; /* Texte en blanc */
+    padding: 8px 16px; /* Espacement plus petit autour du texte */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 14px; /* Taille de la police plus petite */
+    margin-top: 10px; /* Espacement entre le bouton et le texte au-dessus */
+    margin-bottom: 20px; /* Espacement sous le bouton */
+    display: inline-block; /* Permet au bouton de ne pas prendre toute la largeur */
+    transition: background-color 0.3s ease; /* Animation pour le survol */
+}
+
+.project-modal-button:hover {
+    background-color: #778faf; /* Couleur de fond au survol */
+}
+
+
+
+
+
+
+
+/* --- STYLE DE LA NAVBAR --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(31, 41, 55, 0.95); /* Couleur sombre légèrement transparente */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Tu pourras ajouter un menu burger plus tard si besoin */
+    }
+}
+
+/* --- STYLE DE LA SECTION EXPÉRIENCE (TIMELINE) --- */
+.experience {
+    background: var(--primary); /* Fond sombre */
+    padding: 5rem 0;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+/* Réutilisation de l'animation de la barre sous le titre */
+.experience h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 25%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 1), rgba(139, 92, 246, 1), rgba(59, 130, 246, 1));
+    animation: slide 1.5s infinite;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* La ligne verticale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px; /* Aligné à gauche pour mobile, on ajustera pour desktop si besoin */
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--blue), var(--purple));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 50px; /* Espace pour la ligne */
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 11px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--blue);
+    border-radius: 50%;
+    border: 4px solid var(--primary); /* Bordure couleur de fond pour effet "coupé" */
+    box-shadow: 0 0 0 2px var(--blue);
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--blue);
+    border-radius: 99px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+    background: var(--bg-overlay);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+    background: var(--bg-overlay-hover);
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    color: var(--purple);
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.timeline-content li {
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+/* Taille des carrousels dans la section Expérience */
+.exp-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Largeur max */
+    height: 300px;    /* Hauteur fixe */
+    margin: 1.5rem auto 0;
+    border-radius: 12px;
+    overflow: hidden; /* Important pour cacher les images qui attendent */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* On s'assure que les images prennent bien toute la place */
+.exp-carousel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- STYLE DU BOUTON THEME --- */
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    color: var(--blue);
+}
+
+/* Gestion de l'affichage des icônes */
+.sun-icon { display: block; } /* Par défaut (mode sombre), on voit le soleil */
+.moon-icon { display: none; } /* On cache la lune */
+
+
+
+/* ==========================================================
+   MODE MONO-COULEUR (SUPPRESSION DES DÉGRADÉS)
+   A coller à la toute fin de style.css
+   ========================================================== */
+
+/* 1. Force un fond GRIS UNI sur toutes les sections */
+body, 
+.hero, 
+.about, 
+.projects, 
+.experience, 
+.certifications, 
+.contact {
+    background: #1f2937 !important; /* Couleur unie (Gris foncé) */
+    background-image: none !important; /* Supprime le linear-gradient */
+}
+
+/* 2. Supprime le dégradé sur le Logo (Harry ARAUX) en haut */
+.nav-logo {
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important; /* Devient BLANC uni */
+    color: #ffffff !important;
+}
+
+/* 3. Supprime les dégradés sur les barres sous les titres (H2) */
+.about h2::after, .hero h2::after, .projects h2::after, 
+.contact h2::after, .philosophy-section h2::after, 
+.experience h2::after, .certifications h2::after {
+    background: #8b5cf6 !important; /* Une seule couleur (Violet ici) */
+    /* background: #ffffff !important;  <-- Mets ça si tu veux la barre blanche */
+}
+
+/* 4. Supprime les dégradés des cartes "Intérêts" (Voiture, Patisserie...) */
+.philosophy-card.blue, 
+.philosophy-card.purple, 
+.philosophy-card.green {
+    background: #111827 !important; /* Fond plus sombre uni */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Une petite bordure fine */
+}
+
+/* 5. (Optionnel) Si tu veux distinguer une section sur deux */
+/* Décommente les lignes ci-dessous pour alterner gris clair / gris foncé */
+
+/*
+.about, .projects, .certifications {
+    background: #111827 !important; 
+}
+*/
+
+
+
+
+
+/* ==========================================================
+   MODE CLAIR (LIGHT MODE) - VERSION CORRIGÉE ET COMPLÈTE
+   A coller TOUT EN BAS du fichier style.css (Remplace l'ancien bloc)
+   ========================================================== */
+
+/* 1. Fond général et Textes principaux */
+body.light-mode,
+body.light-mode .hero,
+body.light-mode .about,
+body.light-mode .projects,
+body.light-mode .experience,
+body.light-mode .certifications,
+body.light-mode .contact {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+/* 2. CORRECTION DU TITRE "HARRY ARAUX" (C'était blanc sur blanc) */
+body.light-mode .nom {
+    color: #111827 !important; /* Devient Noir */
+}
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode p {
+    color: #1f2937 !important;
+}
+
+/* 3. CORRECTION DES LOGOS SOCIAUX (En bas de découvrir) */
+body.light-mode .social-link {
+    background: #f3f4f6 !important; /* Fond gris clair */
+    color: #1f2937 !important;      /* Icône noire */
+    border: 1px solid #e5e7eb !important;
+}
+body.light-mode .social-link:hover {
+    color: var(--blue) !important;
+    border-color: var(--blue) !important;
+}
+
+/* 4. CORRECTION FORMATION (Garder le rouge + Modal) */
+/* Le texte "Cliquez pour plus d'info" reste ROUGE/FLASHY */
+body.light-mode .education-card .click-info {
+    color: #ff0000 !important; /* Rouge forcé */
+    font-weight: bold !important;
+}
+/* La carte Formation elle-même */
+body.light-mode .education-card {
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+/* 5. CORRECTION DES MODALES (Formation & Projets quand on clique) */
+body.light-mode .modal-content {
+    background: #ffffff !important; /* Fond de la fenêtre blanc */
+    color: #1f2937 !important;      /* Texte noir */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important;
+}
+body.light-mode .modal-content p,
+body.light-mode .modal-content li,
+body.light-mode .modal-content h3,
+body.light-mode .modal-content h4 {
+    color: #1f2937 !important;
+}
+body.light-mode .close-button {
+    color: #1f2937 !important; /* Croix de fermeture noire */
+}
+
+/* 6. CORRECTION "MES INTÉRÊTS" (Philosophie) */
+/* On force les cartes colorées à devenir blanches avec bordure */
+body.light-mode .philosophy-card {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+}
+body.light-mode .philosophy-card h3 {
+    color: #111827 !important;
+}
+body.light-mode .philosophy-card p {
+    color: #4b5563 !important;
+}
+/* On garde la couleur des icônes pour qu'on sache qui est quoi */
+body.light-mode .philosophy-card.blue svg { color: #3b82f6 !important; }
+body.light-mode .philosophy-card.purple svg { color: #8b5cf6 !important; }
+body.light-mode .philosophy-card.green svg { color: #10b981 !important; }
+
+/* 7. CORRECTION CV ET MOOC (Documents) */
+body.light-mode .document-card {
+    background: #f3f4f6 !important; /* Fond gris clair */
+    color: #1f2937 !important;      /* Texte Noir */
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+}
+body.light-mode .document-card span {
+    color: #1f2937 !important;
+}
+body.light-mode .document-card:hover {
+    background: #e5e7eb !important; /* Un peu plus foncé au survol */
+    transform: translateY(-5px);
+}
+
+/* 8. CORRECTION FORMULAIRE CONTACT (Nom, Email, Message) */
+body.light-mode label {
+    color: #1f2937 !important; /* Libellés en noir */
+}
+body.light-mode input,
+body.light-mode textarea {
+    background: #ffffff !important; /* Fond des champs blanc */
+    border: 1px solid #9ca3af !important; /* Bordure grise visible */
+    color: #000000 !important;      /* Texte qu'on tape en noir */
+}
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder {
+    color: #6b7280 !important; /* Placeholder gris moyen */
+}
+
+/* 9. Barre de navigation et autres ajustements */
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid #e5e7eb !important;
+}
+body.light-mode .nav-logo {
+    -webkit-text-fill-color: #111827 !important;
+    color: #111827 !important;
+}
+body.light-mode .nav-links a { color: #4b5563 !important; }
+body.light-mode .nav-links a:hover { color: var(--blue) !important; }
+
+/* Gestion Icônes Soleil/Lune */
+body.light-mode .sun-icon { display: none !important; }
+body.light-mode .moon-icon { display: block !important; }
+body.light-mode .theme-btn { color: #1f2937 !important; }
+
+
+/* ==========================================================
+   CORRECTION LISTE EXPÉRIENCE (Mode Clair)
+   A coller tout en bas de style.css
+   ========================================================== */
+
+   body.light-mode .timeline-content ul,
+   body.light-mode .timeline-content li {
+       color: #000000 !important; /* Force le texte en NOIR pur */
+   }
+
+
+   /* ==========================================================
+   RESTAURATION DES DÉGRADÉS (INTÉRÊTS) - MODE SOMBRE & CLAIR
+   A coller TOUT EN BAS de style.css
+   ========================================================== */
+
+/* 1. On cible les cartes Automobile (Blue), Pâtisserie (Purple) et Musculation (Green) */
+/* On force le background avec !important pour ignorer le mode clair/sombre */
+
+body .philosophy-card.blue,
+body.light-mode .philosophy-card.blue {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa) !important; /* Bleu */
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4) !important; /* Ombre bleue */
+}
+
+body .philosophy-card.purple,
+body.light-mode .philosophy-card.purple {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa) !important; /* Violet */
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4) !important; /* Ombre violette */
+}
+
+body .philosophy-card.green,
+body.light-mode .philosophy-card.green {
+    background: linear-gradient(135deg, #10b981, #34d399) !important; /* Vert */
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4) !important; /* Ombre verte */
+}
+
+/* 2. IMPORTANT : On force le texte et les icônes en BLANC à l'intérieur */
+/* Car sur un fond coloré, le texte noir du mode clair serait illisible */
+
+body .philosophy-card h3,
+body.light-mode .philosophy-card h3,
+body .philosophy-card p,
+body.light-mode .philosophy-card p {
+    color: #ffffff !important;
+}
+
+body .philosophy-card svg,
+body.light-mode .philosophy-card svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+/* ==========================================================
+   VISIBILITÉ TRAIT NAVBAR (MODE SOMBRE & CLAIR)
+   A coller TOUT EN BAS de style.css
+   ========================================================== */
+
+/* 1. Pour le Mode Sombre (Par défaut) */
+.navbar {
+    /* Je passe l'épaisseur à 2px (au lieu de 1px) */
+    /* J'augmente l'opacité à 0.3 (au lieu de 0.1) pour qu'il soit plus blanc */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3) !important;
+    
+    /* Optionnel : Si tu veux que le trait soit coloré (Violet) au lieu de blanc, 
+       décommente la ligne ci-dessous : */
+    /* border-bottom: 3px solid #8b5cf6 !important; */
+}
+
+/* 2. Pour le Mode Clair */
+body.light-mode .navbar {
+    /* Trait gris plus foncé et plus épais */
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
+
+
+
+
+
+/* =================================================================
+   GALERIE ACCORDÉON HYBRIDE (SOMBRE & CLAIR)
+   ================================================================= */
+
+/* --- 1. DÉFINITION DES VARIABLES (IMAGES ET COULEURS) --- */
+
+/* PAR DÉFAUT (MODE SOMBRE) */
+:root {
+    /* Images Sombres (Tech Dark) */
+    --img-but: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop');
+    --img-prepa: url('https://images.unsplash.com/photo-1592659762303-90081d34b277?q=80&w=1973&auto=format&fit=crop');
+    --img-bac: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');
+    
+    /* Voile sombre pour que le texte blanc ressorte */
+    --panel-overlay-gradient: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 100%);
+    
+    /* Couleur du texte */
+    --panel-text-color: #ffffff;
+    --panel-desc-color: rgba(255, 255, 255, 0.9);
+}
+
+/* QUAND LE MODE CLAIR EST ACTIVÉ (body.light-mode) */
+body.light-mode {
+    /* Images Claires (Tech Bright/Clean) */
+    /* BUT : Salle serveur blanche et propre */
+    --img-but: url('https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=2070&auto=format&fit=crop');
+    /* Prépa : Bureau d'ingénieur lumineux, plans */
+    --img-prepa: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop');
+    /* Bac : Code sur écran clair, bureau propre */
+    --img-bac: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop');
+
+    /* Voile CLAIR (blanc vers transparent) pour que le texte NOIR ressorte */
+    --panel-overlay-gradient: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 100%);
+    
+    /* Couleur du texte (Noir/Gris foncé) */
+    --panel-text-color: #1f2937;
+    --panel-desc-color: #374151;
+}
+
+
+/* --- 2. STRUCTURE DE LA GALERIE --- */
+
+.accordion-gallery {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.gallery-panel {
+    position: relative;
+    flex: 1; /* Égal au départ */
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+    /* Bordure subtile qui s'adapte au thème */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.light-mode .gallery-panel {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Attribution des images via les variables */
+.panel-but { background-image: var(--img-but); }
+.panel-prepa { background-image: var(--img-prepa); }
+.panel-bac { background-image: var(--img-bac); }
+
+/* Animation au survol */
+.gallery-panel:hover {
+    flex: 5;
+}
+
+/* --- 3. LE VOILE ET LE CONTENU (ADAPTATIFS) --- */
+
+.panel-overlay {
+    position: absolute;
+    inset: 0;
+    /* Utilise la variable de gradient qui change selon le mode */
+    background: var(--panel-overlay-gradient);
+    transition: background 0.5s ease;
+    opacity: 0.8; /* Un peu transparent au repos */
+}
+.gallery-panel:hover .panel-overlay {
+    opacity: 1; /* Plus opaque au survol */
+}
+
+.panel-content {
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    right: 25px;
+    z-index: 2;
+    /* Utilise la variable de couleur de texte */
+    color: var(--panel-text-color) !important;
+}
+
+.panel-year {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--theme-color, #8b5cf6); /* Violet */
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.gallery-panel h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    white-space: nowrap; 
+    /* Force la couleur adaptative */
+    color: var(--panel-text-color) !important;
+}
+
+/* Détails */
+.panel-details {
+    font-size: 1rem;
+    line-height: 1.5;
+    /* Couleur de description adaptative */
+    color: var(--panel-desc-color) !important;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.gallery-panel:hover .panel-details {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .accordion-gallery {
+        flex-direction: column;
+        height: 600px;
+    }
+    .gallery-panel:active, 
+    .gallery-panel:focus {
+        flex: 3;
+    }
+}
+
+
+
+
+
+
+
+
